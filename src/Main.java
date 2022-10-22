@@ -12,6 +12,12 @@ public class Main {
             response = scanner.nextLine();
 
             if (response.equalsIgnoreCase("q")) {
+                System.out.println("Goodbye.");
+                break;
+            }
+
+            if (!isAlphaOnly(response)) {
+                System.out.println("The phrase must only contain letters.");
                 break;
             }
 
@@ -19,5 +25,9 @@ public class Main {
             System.out.println("");
             System.out.println("\nSupply another phrase, or type 'q' to quit.");
         }
+    }
+
+    private static boolean isAlphaOnly(String text) {
+        return text.matches("[a-zA-Z]+");
     }
 }
