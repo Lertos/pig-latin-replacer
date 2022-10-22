@@ -3,14 +3,45 @@ public class PigLatinConverter {
     static final char[] vowels = {'a', 'e', 'i', 'o', 'u', 'y'};
 
     public String convertPhrase(String text) {
-        String newString = "";
+        StringBuilder sb = new StringBuilder();
         String[] words = text.split(" ");
 
         for (String word : words) {
             //Figure out if the word starts with a vowel or consonant
+            if (isVowel(word.charAt(0))) {
+                sb.append(applyVowelRule(text));
+            } else {
+                sb.append(applyConsonantRule(text));
+            }
+            sb.append(" ");
+        }
+        return sb.toString();
+    }
+
+    private boolean isVowel(char character) {
+        for (char vowel : vowels) {
+            if (character == vowel) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //Words that start with single/multiple constants; add a dash before them then move
+    //them to the end and add 'ay' at the end of the word
+    private String applyConsonantRule(String word) {
+        String newWord = "";
+
+        for (int i=0; i<word.length(); i++) {
+
         }
 
-        return newString;
+        return newWord;
+    }
+
+    //Words that start with a vowel; add '-yay' at the end of the word
+    private String applyVowelRule(String word) {
+        return word + "-yay";
     }
 
 
