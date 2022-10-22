@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1429acdb-e383-4cd4-9adf-dc225b2f5c80" name="Changes" comment="Adding two rules and the main for loop logic">
+    <list default="true" id="1429acdb-e383-4cd4-9adf-dc225b2f5c80" name="Changes" comment="Fixing the loop logic, and adding StringBuilder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PigLatinConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PigLatinConverter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666469191609</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixing the loop logic, and adding StringBuilder">
+      <created>1666470104500</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666470104500</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,6 +102,7 @@
     <MESSAGE value="Adding check for alpha-only phrases" />
     <MESSAGE value="Adding the converter class" />
     <MESSAGE value="Adding two rules and the main for loop logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding two rules and the main for loop logic" />
+    <MESSAGE value="Fixing the loop logic, and adding StringBuilder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing the loop logic, and adding StringBuilder" />
   </component>
 </project>

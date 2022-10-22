@@ -9,9 +9,9 @@ public class PigLatinConverter {
         for (String word : words) {
             //Figure out if the word starts with a vowel or consonant
             if (isVowel(word.charAt(0))) {
-                sb.append(applyVowelRule(text));
+                sb.append(applyVowelRule(word));
             } else {
-                sb.append(applyConsonantRule(text));
+                sb.append(applyConsonantRule(word));
             }
             sb.append(" ");
         }
@@ -30,20 +30,26 @@ public class PigLatinConverter {
     //Words that start with single/multiple constants; add a dash before them then move
     //them to the end and add 'ay' at the end of the word
     private String applyConsonantRule(String word) {
-        String newWord = "";
+        StringBuilder sb = new StringBuilder();
+        String convertedWord = "";
 
         for (int i=0; i<word.length(); i++) {
+            char currChar = word.charAt(i);
 
+            if (isVowel(currChar)) {
+                convertedWord = word.substring(i) + "-" + sb.toString().toLowerCase() + "ay";
+                break;
+            } else {
+                sb.append(currChar);
+            }
         }
-
-        return newWord;
+        return convertedWord;
     }
 
     //Words that start with a vowel; add '-yay' at the end of the word
     private String applyVowelRule(String word) {
         return word + "-yay";
     }
-
 
     //I've chosen to ignore the compound rule as you would need a list of all
     //compound rules, or a lookup to see if the word contains two other words
