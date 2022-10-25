@@ -1,6 +1,9 @@
 # pig-latin-replacer
 A simple application that, when given a phrase, will return the phrase in pig latin.
 
+# Level:
+Simple
+
 # Learned:
 - How to use the Scanner object
 - How to iterate through Strings
